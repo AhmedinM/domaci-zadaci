@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Zadatak 1</title>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Your Details</legend>
+                <br/>
+                <label for="nameInput">1. Name</label>
+                <input type="text" id="nameInput" placeholder="First and last name"/> <br/>
+                <label for="emailInput">2. Email</label>
+                <input type="email" id="emailInput" placeholder="example@domain.com"/> <br/>
+                <label for="phoneInput">3. Phone</label>
+                <input type="tel" id="phoneInput" placeholder="Eg. +4475000000000"/> <br/><br/>
+            </fieldset>
+            <fieldset>
+                <legend>Delivery Address</legend>
+                <br/>
+                <label for="addressInput">1. Address</label>
+                <textarea id="addressInput" cols="20" rows="2"></textarea> <br/>
+                <label for="postInput">2. Post code</label>
+                <input type="text" id="postInput"/> <br/>
+                <label for="countryInput">3. Country</label>
+                <select id="countryInput">
+                    <option>Choose country</option>
+                </select>
+                <br/><br/>
+            </fieldset>
+            <fieldset>
+                <legend>Card Details</legend>
+                <br/>
+                <label for="typeInput">1.</label>
+                    <fieldset id="typeInput" style="margin-left: 18px; margin-top: -18px;">
+                        <legend>Card Type</legend>
+                        <label>
+                            1.
+                            <input type="radio" name="cardType"/>
+                            VISA
+                        </label>
+                        <br/>
+                        <label>
+                            2.
+                            <input type="radio" name="cardType"/>
+                            American Express
+                        </label>
+                        <br/>
+                        <label>
+                            3.
+                            <input type="radio" name="cardType"/>
+                            Mastercard
+                        </label>
+                    </fieldset>
+                <!--</label>-->
+                <label for="numberInput">2. Card Number</label>
+                <input type="text" id="numberInput"/> <br/>
+                <label for="securityInput">3. Security code</label>
+                <input type="text" id="securityInput"/> <br/>
+                <label for="cardNameInput">4. Name on card</label>
+                <input type="text" id="cardNameInput" placeholder="Exact name as on the card"/> <br/> <br/>
+            </fieldset>
+            <fieldset>
+                <button>Buy It!</button>
+            </fieldset>
+        </form>
+    </body>
+</html>
