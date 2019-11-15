@@ -12,13 +12,13 @@ class V6TDIEngine implements IEngine{
         return "Dizel";
     }
     public function getNumberOfCylinders(){
-        return "6 ventila";
+        return "6";
     }
     public function getLiters(){
-        return "3L";
+        return "3";
     }
     public function getHorsePower(){
-        return "237 konjskih snaga";   
+        return "237";   
     }
 }
 
@@ -27,13 +27,13 @@ class V8TDIEngine implements IEngine{
         return "Dizel";
     }
     public function getNumberOfCylinders(){
-        return "8 ventila";
+        return "8";
     }
     public function getLiters(){
-        return "4.2L";
+        return "4.2";
     }
     public function getHorsePower(){
-        return "345 konjskih snaga";   
+        return "345";   
     }
 }
 
@@ -42,13 +42,13 @@ class V6FSIEngine implements IEngine{
         return "Benzin";
     }
     public function getNumberOfCylinders(){
-        return "6 ventila";
+        return "6";
     }
     public function getLiters(){
-        return "3L";
+        return "3";
     }
     public function getHorsePower(){
-        return "286 konjskih snaga";   
+        return "286";   
     }
 }
 
@@ -57,12 +57,12 @@ class V8FSIEngine implements IEngine{
         return "Benzin";
     }
     public function getNumberOfCylinders(){
-        return "8 ventila";
+        return "8";
     }
     public function getLiters(){
-        return "4.2L";
+        return "4.2";
     }
     public function getHorsePower(){
-        return "367 konjskih snaga";   
+        return "367";   
     }
 }

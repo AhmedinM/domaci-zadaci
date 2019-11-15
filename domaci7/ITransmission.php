@@ -7,45 +7,45 @@ interface ITransmission{
 
 class FiveGearManualTransmission implements ITransmission{  //program ne dozvoljava da naziv klase pocne
     function getType(){                                     //brojem, pa sam stavio rijec
-        return "Manuelni menjač";
+        return "Manuelni <br/> menjač";
     }
     function getNumberOfGears(){
-        return "5 brzina";
+        return "5";
     }
 }
 
 class SixGearManualTransmission implements ITransmission{
     function getType(){
-        return "Manuelni menjač";
+        return "Manuelni <br/> menjač";
     }
     function getNumberOfGears(){
-        return "6 brzina";
+        return "6";
     }
 }
 
 class FiveGearAutomaticTransmission implements ITransmission{
     function getType(){
-        return "Automatski menjač";
+        return "Automatski <br/> menjač";
     }
     function getNumberOfGears(){
-        return "5 brzina";
+        return "5";
     }
 }
 
 class SixGearAutomaticTransmission implements ITransmission{
     function getType(){
-        return "Automatski menjač";
+        return "Automatski <br/> menjač";
     }
     function getNumberOfGears(){
-        return "6 brzina";
+        return "6";
     }
 }
 
 class SevenGearAutomaticTransmission implements ITransmission{
     function getType(){
-        return "Automatski menjač";
+        return "Automatski <br/> menjač";
     }
     function getNumberOfGears(){
-        return "7 brzina";
+        return "7";
     }
 }

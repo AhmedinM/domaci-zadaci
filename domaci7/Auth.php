@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 class Auth{
     public function check(){
         if(!isset($_SESSION["logedin"]) || $_SESSION["logedin"]!==true){
