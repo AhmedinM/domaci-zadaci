@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Slider</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container border border-muted mt-3 col-6">
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <img class="col-12" src="tiger.jpg" id="active" alt="Nema">
+                    <img class="col-12 d-none" src="tigers.jpg" alt="Nema" id="fd">
+                    <img class="col-12 d-none" src="tigerw.jpg" alt="Nema">
+                </div>
+            </div>
+            <div class="row mt-3 mb-3">
+                <div class="col-12 text-center">
+                    <i class="fa fa-angle-left ml-3 fa-4x float-left font-weight-bold" id="left"></i>
+                    <!--<span class="iconify" data-icon="fa-solid:ellipsis-h" data-inline="false"></span>-->
+                    <span>
+                        <i class="fa fa-circle text-dark" id="active2"></i>
+                        <i class="fa fa-circle text-muted"></i>
+                        <i class="fa fa-circle text-muted"></i>
+                    </span>
+                    <i class="fa fa-angle-right fa-4x float-right mr-3 font-weight-bold" id="right"></i>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $("document").ready(function(){
+                $("#left").hide();
+                $("#right").click(function(){
+                    var curr = $("#active");
+                    var next = curr.next();
+                    if(next.length>0){
+                        curr.fadeOut();
+                        next.fadeIn();
+                        curr.removeClass();
+                        curr.removeAttr("id");
+                        curr.addClass("d-none");
+                        next.removeClass()
+                        next.addClass("col-12");
+                        next.attr("id","active");
+
+                        var curr2 = $("#active2");
+                        var next4 = curr2.next();
+                        curr2.removeClass();
+                        curr2.removeAttr("id");
+                        curr2.addClass("fa fa-circle text-muted");
+                        next4.removeClass()
+                        next4.addClass("fa fa-circle text-dark");
+                        next4.attr("id","active2");
+
+                        var next3 = curr2.next();
+                        var next2 = next.next();
+                        if(next2.length==0){
+                            $("#right").hide();
+                        }else{
+                            $("#right").show();
+                            $("#left").show();
+                        }
+                    }
+                });
+                $("#left").click(function(){
+                    var curr = $("#active");
+                    var prev = curr.prev();
+                    if(prev.length>0){
+                        curr.fadeOut();
+                        prev.fadeIn();
+                        curr.removeClass();
+                        curr.removeAttr("id");
+                        curr.addClass("d-none");
+                        prev.removeClass()
+                        prev.addClass("col-12");
+                        prev.attr("id","active");
+
+                        var curr2 = $("#active2");
+                        var prev4 = curr2.prev();
+                        curr2.removeClass();
+                        curr2.removeAttr("id");
+                        curr2.addClass("fa fa-circle text-muted");
+                        prev4.removeClass()
+                        prev4.addClass("fa fa-circle text-dark");
+                        prev4.attr("id","active2");
+
+                        var prev2 = prev.prev();
+                        if(prev2.length==0){
+                            $("#left").hide();
+                        }else{
+                            $("#left").show();
+                            $("#right").show();
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
