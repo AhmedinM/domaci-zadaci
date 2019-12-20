@@ -15,16 +15,18 @@
                     <img class="col-12" src="tiger.jpg" id="active" alt="Nema">
                     <img class="col-12 d-none" src="tigers.jpg" alt="Nema" id="fd">
                     <img class="col-12 d-none" src="tigerw.jpg" alt="Nema">
+                    <img class="col-12 d-none" src="tigerj.jpg" alt="Nema">
+                    <img class="col-12 d-none" src="tigerd.jpg" alt="Nema">
                 </div>
             </div>
             <div class="row mt-3 mb-3">
                 <div class="col-12 text-center">
                     <i class="fa fa-angle-left ml-3 fa-4x float-left font-weight-bold" id="left"></i>
                     <!--<span class="iconify" data-icon="fa-solid:ellipsis-h" data-inline="false"></span>-->
-                    <span>
-                        <i class="fa fa-circle text-dark" id="active2"></i>
+                    <span id="sp">
+                        <!--<i class="fa fa-circle text-dark" id="active2"></i>
                         <i class="fa fa-circle text-muted"></i>
-                        <i class="fa fa-circle text-muted"></i>
+                        <i class="fa fa-circle text-muted"></i>-->
                     </span>
                     <i class="fa fa-angle-right fa-4x float-right mr-3 font-weight-bold" id="right"></i>
                 </div>
@@ -34,6 +36,17 @@
         <script>
             $("document").ready(function(){
                 $("#left").hide();
+                var cir = document.getElementsByTagName("img");
+                for(let i=0;i<cir.length;i++){
+                    let el = $("<i></i>");
+                    if(i===0){
+                        el.addClass("fa fa-circle text-dark");
+                        el.attr("id","active2");
+                    }else{
+                        el.addClass("fa fa-circle text-muted");
+                    }
+                    $("#sp").append(el);
+                }
                 $("#right").click(function(){
                     var curr = $("#active");
                     var next = curr.next();
